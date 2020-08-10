@@ -58,8 +58,8 @@ public class ReceivingFileThread implements Runnable {
                                 String filename = st.nextToken();
                                 int filesize = Integer.parseInt(st.nextToken());
                                 consignee = st.nextToken(); // Get the Sender Username
-                                main.setMyTitle("Đang tải File....");
-                                System.out.println("Đang tải File....");
+                                main.setMyTitle("Loading File....");
+                                System.out.println("Loading File....");
                                 System.out.println("From: "+ consignee);
                                 String path = main.getMyDownloadFolder() + filename;                                
                                 /*  Creat Stream   */
@@ -81,18 +81,15 @@ public class ReceivingFileThread implements Runnable {
                                 fos.flush();
                                 fos.close();
                                 main.setMyTitle("you are logged in as: " + main.getMyUsername());
-                                JOptionPane.showMessageDialog(null, "File đã được tải đến \n'"+ path +"'");
+                                JOptionPane.showMessageDialog(null, "File has been downloaded \n'"+ path +"'");
                                 System.out.println("File đã được lưu: "+ path);
                             } catch (IOException e) {
-                                /*
-                                Gửi lại thông báo lỗi đến sender
-                                Định dạng: CMD_SENDFILERESPONSE [username] [Message]
-                                */
+                                
                                 DataOutputStream eDos = new DataOutputStream(socket.getOutputStream());
-                                eDos.writeUTF("CMD_SENDFILERESPONSE "+ consignee + " Kết nối bị mất, vui lòng thử lại lần nữa.!");
+                                eDos.writeUTF("CMD_SENDFILERESPONSE "+ consignee + " Connection lost, please try again.!");
                                 
                                 System.out.println(e.getMessage());
-                                main.setMyTitle("bạn đã được đăng nhập với tên: " + main.getMyUsername());
+                                main.setMyTitle("You are logged in with the name: " + main.getMyUsername());
                                 JOptionPane.showMessageDialog(main, e.getMessage(), "Exception", JOptionPane.ERROR_MESSAGE);
                                 socket.close();
                             }
