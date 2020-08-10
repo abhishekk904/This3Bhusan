@@ -51,8 +51,7 @@ public class ReceivingFileThread implements Runnable {
                 String CMD = st.nextToken();
                 
                 switch(CMD){
-                    
-                    //   hàm này sẽ xử lý việc nhận một file trong một tiến trình nền xử lý từ một user khác
+                   
                     case "CMD_SENDFILE":
                         String consignee = null;
                             try {
