@@ -47,12 +47,12 @@ This Application allows file sharing between mutiples nodes.
 ![Screenshot 2020-07-25 at 6 47 07 PM](https://user-images.githubusercontent.com/54954596/88458241-47a55080-ceaa-11ea-89af-9945918b3311.png)
 
 
-## Clinet : Confirm Dialog
+## Client : Confirm Dialog
 
 ![Screenshot 2020-07-25 at 6 47 29 PM](https://user-images.githubusercontent.com/54954596/88458261-70c5e100-ceaa-11ea-96f6-ef6de81eeb54.png)
 
 
-## Clinet : File Browser (Recieve)
+## Client : File Browser (Recieve)
 
 ![Screenshot 2020-07-25 at 6 47 36 PM](https://user-images.githubusercontent.com/54954596/88458263-73283b00-ceaa-11ea-9581-1b9dc060bcc0.png)
 
